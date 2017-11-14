@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    @import "../css/common.css";
+  </style>
+  <title>Javascript</title>
+</head>
+<body>
+<h2>常用数组方法</h2>
+<h4>concat(< otherArray >)</h4>
+将数组和参数所指数组的内容合并为一个新数组.可指定多个数组 => 数组
+<h4>join(< separator >)</h4>
+将所有数组元素连为一个字符串.各元素内容用参数指定的字符分割 => 字符串
+<h4>pop()</h4>
+把数组当做栈使用,删除并返回数组的最后一个元素 => 对象
+<h4>push(< item >)</h4>
+把数组当做栈使用,将指定的数据添加到数组中 => void
+<h4>reverse()</h4>
+就地反转数组元素的次序 => 数组
+<h4>shift()</h4>
+累死 pop,但操作的是数组的第一个元素 => 对象
+<h4>slice(< start >,< end >)</h4>
+返回一个子数组 => 数组
+<h4>sort()</h4>
+就地对数组元素排序 => 数组
+<h4>unshift(< item >)</h4>
+类似push,但新元素被插到数组的开头位置
+<h2>处理错误</h2>
+<h4>try{}catch(err){}语句处理错误</h4>
+<pre>
+&lt;script&gt;
+  var txt = "";
+  function message() {
+    try {
+      adddlert("Welcome guest!");
+    }
+    // catch提供一个从错误中恢复或在错误发生之后进行清理工作的机会
+    catch (err) {
+      /*
+      error:
+        message: 对错误条件的说明 => 字符串
+        name: 错误的名称,默认为error => 字符串
+        number: 该错误的错误代码(如果有的话) => 数值
+      */
+      txt = "本页有一个错误。\n\n";
+      txt += "错误描述：" + err.message + "\n\n";
+      txt += "点击确定继续。\n\n";
+      alert(txt);
+    }
+  }
+&lt;/script&gt;
+&lt;input type="button" value="查看消息" onclick="message()"/&gt;
+</pre>
+<script>
+  var txt = "";
+
+  function message() {
+    try {
+      adddlert("Welcome guest!");
+    }
+    catch (err) {
+      txt = "本页有一个错误。\n\n";
+      txt += "错误描述：" + err.message + "\n\n";
+      txt += "点击确定继续。\n\n";
+      alert(txt);
+    }
+  }
+</script>
+<input type="button" value="查看消息" onclick="message()"/>
+<h4>finally子句</h4>
+接上:如果错误语句,有无报错都需执行语句,使用finally子句即可
+<pre>
+  &lt;script&gt;
+  var txt = "";
+  function message() {
+    try {
+      // 时间事件响应代码
+    }
+    catch (err) {
+      // 时间事件响应代码
+    } finally{
+      // 时间事件响应代码
+    }
+  }
+&lt;/script&gt;
+&lt;input type="button" value="查看消息" onclick="message()"/&gt;
+</pre>
+</body>
+</html>

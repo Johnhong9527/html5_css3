@@ -6,3 +6,11 @@ body{
   padding: 0 15vw;
   background-color: #ff7659;
 }
+h2 {
+  margin-top: 5vh;
+}
+h4{
+  margin-top: 2.5vh;
+  font-size: 15pt;
+  font-weight: 800;
+}
