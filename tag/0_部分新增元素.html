@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>语义化标签</title>
+  <style>
+    body {
+      padding-bottom: 5vh;
+    }
+  </style>
+</head>
+<body>
+<!--新增的结构元素-->
+<h2>新增的结构元素:</h2>
+<h4>section:</h4>
+<section>
+  表示页面中的一个内容区块,比如章节、页眉、页脚或页眉中的其他部分,可与h1,h2...h6等元素结合起来使用,标示文档结构
+</section>
+<h4>article:</h4>
+<article>页面中的一块与上下文不相关的独立内容,譬如博客中的一篇文章或报纸中的一篇文章</article>
+<h4>aside:</h4>
+<aside>表示article元素的内容之外的、与article元素的内容相关的辅助信息</aside>
+<h4>header;</h4>
+<header>表示页面中一个内容区块或整个页面的标题</header>
+<h4>hgroup:</h4>
+<hgroup>用于对整个页面或页面中一个内容区块的标题进行组合</hgroup>
+<h4>footer:</h4>
+<footer>表示整个页面或页面中一个内容区块的脚注.一般来说,它会包含创作者的姓名、创作日期以及创作者联系信息</footer>
+<h4>nav:</h4>
+<nav>表示页面中导航链接的部分</nav>
+<h4>figure:</h4>
+<figure>
+  表示一段独立的流内容,一般表示文档主流内容中的一个独立单元,使用figcaption元素为figure元素添加标题
+  <pre>
+&lt;figure&gt;
+  &lt;figcaption&gt;PRC&lt;/figcaption&gt;
+&lt;p&gt;the people's republic of china was born in 1949&lt;/p&gt;
+&lt;/figure&gt;
+</pre>
+</figure>
+<!--新增的元素-->
+<h2>新增的元素:</h2>
+<h4>video元素:</h4>
+video元素定义视频,比如电影片段或其他视频流
+<pre>
+&lt;video src="some-video.mp4" controls&gt;&lt;/video&gt;
+</pre>
+<div style="width: 200px">
+  <video src="http://wozhua-others.qiniudn.com/20160215-wozhua-2.MP4"
+         poster="http://wozhua-others.qiniudn.com/20160215-wozhua-2.MP4?vframe/jpg/offset/1/w" controls
+         style="width: 100%;" webkit-playsinline="true" x-webkit-airplay="true"></video>
+</div>
+<h4>audio元素:</h4>
+<pre>
+&lt;audio src="some-audio.wav"&gt;&lt;/audio&gt;
+</pre>
+<h4>embed元素</h4>
+用来插入各种多媒体,格式可以是Midi,wav,aiff,au,mp3等.
+<pre>
+&lt;embed src="horse.wav"/&gt;
+</pre>
+<h4>mark元素</h4>
+主要是用来向用户呈现那些需要突出显示或高亮显示的文字,mark元素的一个比较典型的应用就是在搜索结果中向用户高亮显示搜索关键词
+<pre>&lt;mark&gt;高亮&lt;/mark&gt;</pre>
+<h4>progress元素</h4>
+表示运行中的进程,可以使用progress元素来显示JavaScript中耗费时间的函数进程<br>
+<progress value="22" max="100"></progress>
+<p><b>注释：</b>Internet Explorer 9 以及更早的版本不支持
+  <progress> 标签。
+</p>
+<h4>time元素</h4>
+<pre>&lt;time&gt;&lt;/time&gt;</pre>
+<h4>ruby元素</h4>
+ruby元素表示ruby注释(中文注音或字符)
+<h5>rt元素</h5>
+表示字符(中文注音或字符)的解释或发音
+<h5>rp元素</h5>
+rp元素在ruby注释中使用,以定义不支持ruby元素的浏览器所显示的内容
+<pre>&lt;ruby&gt;漢&lt;rt&gt;&lt;rp&gt;(&lt;/rp&gt;ㄏㄢˋ&lt;rp&gt;)&lt;/rp&gt;&lt;/rt&gt;&lt;/ruby&gt;</pre>
+<h4>wbr元素</h4>
+wbr元素表示软换行.wbr元素与br元素的区别是:br元素表示此处必须换行;而wbr元素的意思是浏览器窗口或父级元素的宽度足够宽度时(没必要换行时),不进行换行,而当宽度不够时,主动在此处进行换行.wbr元素好像对字符型语言作用挺大.对于中文没有多大的用处
+<h4>canvas元素</h4>
+<pre>&lt;canvas id="myCanvas" width="200" height="200"&gt;&lt;/canvas&gt;</pre>
+<h4>details元素</h4>
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
+
+<details open>
+  <summary>Even more details</summary>
+  <p>Here are even more details about the details.</p>
+</details>
+<h4>datalist元素</h4>
+表示可选数据的列表,与input元素配合使用,可以制作输入值的下拉列表.
+<label>Choose a browser from this list:
+  <input list="browsers" name="myBrowser"/></label>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+<h4>datagrid元素</h4>
+&lt;datagrid&gt; 标签定义可选数据的列表。datagrid 作为树列表来显示。
+<h4>output元素</h4>
+HTML
+<mark>&lt;output&gt;</mark>
+标签表示计算或用户操作的结果。
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" name="b" value="50"/> +
+  <input type="number" name="a" value="10"/> =
+  <output name="result"></output>
+</form>
+<h4>source元素</h4>
+拥有两份源文件的音频播放器。浏览器应该选择它所支持的文件（如果有的话）：<br/>
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<h4>menu元素</h4>
+定义和用法
+&lt;menu&gt; 标签定义命令的列表或菜单。<br>
+&lt;menu&gt; 标签用于上下文菜单、工具栏以及用于列出表单控件和命令。
+<h2>新增的input元素类型</h2>
+<ul>
+  <li>email</li>
+  <li>url</li>
+  <li>number</li>
+  <li>range</li>
+  <li>Date Pickers
+    <ul>
+      <li>date:年.月.日</li>
+      <li>month:选取月.年</li>
+      <li>week:选取周.年</li>
+      <li>time:选取时间(小时和分钟)</li>
+      <li>datetime:选取时间.日.月.年(UTC时间)</li>
+      <li>datetime-local:选取时间.日.月.年(本地时间)</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

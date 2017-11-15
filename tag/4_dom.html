@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <style>
+    @import "../css/common.css";
+  </style>
+  <title>DOM</title>
+</head>
+<body>
+<h2>构建基本文档结构</h2>
+<h4>meta</h4>
+局部属性:name,content,charset,http-equiv<br/>
+application name:当前所属web应用系统的名称<br/>
+author: 当前页的作者名<br/>
+description: 当前页的说明<br/>
+generator: 用来生成HTML的软件名称<br/>
+keywords: 一批以逗号分开的字符串,用来描述页面的内容<br/>
+<h4>http-equiv</h4>
+允许使用的值:
+refresh: 以秒为单位,可以指定多少时间刷新网页或者是跳转到另一个网站去(< meta http-equiv="refresh" content="5;http://www.apress.com" >)<br/>
+default-style: 指定页面优先使用的样式表,content的值应与同一文档中的某个style元素或link元素的title属性值相同<br/>
+content-type: 这是另一种声明HTML页面所用的字符编码的方法.(< meta http-equiv="content-type" content="text/html charset=UTF-8">)<br/>
+<h2>style</h2>
+局部属性:type、media、scoped<br/>
+type:指定样式类型 浏览器只支持 text/css
+scoped:指定作用范围为父元素及兄弟元素,默认忽略
+media: 指定样式适用的媒体[< 常用:
+all:所有设备,aural:语音合成器,braille:盲文设备,screen:计算机,handheld:手持设备,projection:投影机,print:打印预览和打印页面,tyy:电传打字机之类的等宽设备,tv:用于电视机 >]
+<pre>
+古代:
+&lt;style media="screen AND (max-width:500px)" type="text/css"&gt;
+  /*代码*/
+&lt;/style&gt;
+&lt;style media="screen AND (min-width:500px)" type="text/css"&gt;
+  /*代码*/
+&lt;/style&gt;
+现代:
+&lt;style&gt;
+  @media screen and (max-width: 500px){
+
+  }
+  @media screen and (min-width: 500px){
+
+  }
+&lt;/style&gt;
+</pre>
+<h2>scipt</h2>
+<h4>局部属性</h4>
+type: 脚本类型<br/>
+scr: 指定外部脚本的url<br/>
+defer:脚本执行顺序 所有文档元素解析之后加载和执行[< script defer scr="./simple.js" >]<br/>
+async:脚本执行顺序 文档加载时,同步进行加载和执行[< script async scr="./simple.js" >]<br/>
+charset:外部脚本的字符编码只与src一同使用<br/>
+<h4>noscript</h4>
+<pre>
+&lt;<blue>noscript</blue>&gt;
+  JavaScript未启动,部分功能无法执行
+&lt;/<blue>noscript</blue>&gt;
+  # 重定向浏览器(5秒之后,前往百度浏览器)
+&lt;<blue>noscript</blue>&gt;
+  &lt;meta http-equiv="refresh" content="5,https://www.baidu.com"&gt;
+&lt;/<blue>noscript</blue>&gt;
+</pre>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center">\(^o^)/~</h1>
+<!--contenteditable="true" 编辑网页内容-->
+<pre contenteditable="true">
+contenteditable="true" 编辑网页内容
+function btn(){
+  alert("触发事件!");
+}
+</pre>
+<!--oncontextmenu;鼠标右击时间-->
+<pre>
+oncontextmenu;鼠标右击时间
+&lt;div oncontextmenu="myFunction()" contextmenu="mymenu"&gt;
+function myFunction(){
+  alert('鼠标右击事件触发!');
+  return false; // 阻断浏览器自带右击触发
+}
+</pre>
+<h4>dir属性</h4>
+<p dir="rtl">This is right-to-left</p>
+<p dir="ltr">This is left-to-left</p>
+<h4 draggable="true">draggable属性:支持元素拖放</h4>
+<h4 dropzone="move">dropzone属性:拖放操作方式之一</h4>
+<h4>hidden属性:控制元素是否隐藏或者显示</h4>
+<pre>
+简化版
+  &lt;div&gt;显示&lt;/div&gt;
+  &lt;div hidden&gt;隐藏&lt;/div&gt;
+进阶版
+  使用JavaScript来操作,用到2个web API接口.
+  removeAttribute("hidden")方法 和 setAttribute("hidden", "hidden")方法
+</pre>
+<h4>spellcheck属性:</h4>
+<pre>拼写检查,用于文本编辑之内</pre>
+<textarea name="desc" id="" cols="30" rows="10" spellcheck="true"></textarea>
+<h4>tabindex属性:</h4>
+<form>
+  <label>Name: <input type="text" name="name" tabindex="1"></label>
+  <p/>
+  <label>City: <input type="text" name="city" tabindex="8"></label>
+  <p/>
+  <label>Country: <input type="text" name="country" tabindex="2"></label>
+  <p/>
+  <input type="submit" tabindex="3">
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    /*声明样式表使用的字符编码类型*/
+    @charset "UTF-8";
+    /*引入外部的样式表文件*/
+    @import '../css/common.css';
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center">\(^o^)/~</h1>
+<h2>CSS的核心是层叠和继承</h2>
+<h4>样式如何层叠</h4>
+浏览器显示元素时求索一个css时的顺序
+<pre>
+(1)元素内嵌样式(用元素的全局属性style定义的样式)
+(2)文档内嵌样式(定义在style元素中的样式)
+(3)外部样式(用link元素导入样式)
+(4)用户样式(用户定义的样式)
+(5)浏览器样式(浏览器应用的默认样式
+(1-3)作者样式
+(4)用户样式
+(5)浏览器样式
+</pre>
+<h4>(!important)重要样式调整权级最高.</h4>
+<h4>CSS相对单位</h4>
+em => 与元素字号挂钩
+ex => 与元素字体的'x高度'挂钩
+rem => 与根元素的字号挂钩
+px => CSS像素(假定显示设备的分辨率为96pdi)
+% => 另一属性的值的百分比
+<h4>缺乏浏览器支持的css相对度量单位</h4>
+gd => 与网格(grid)挂钩.它依赖于CSS规范中一些定义不太明确的属性.所以未获广泛支持<br/>
+vw => 与视口(viewport)宽度挂钩.1vw等于文档可视区域宽度的 1%<br/>
+vh => 与视口高度挂钩.1vh等于文档可视区域高度的1%<br/>
+vm => 1vm等于最短视口轴长(宽度和高度中较小的那个)的1%<br/>
+ch => 与用当前字体显示的字符的平均宽度挂钩.它在CSS规范中的定义很潦草,其实现也不一致<br/>
+<h4>以算式为值:calc(80% - 20px)</h4>
+<h4>CSS角度单位</h4>
+deg => 度(取值范围: 0deg~360deg)
+grad => 百分度(取值范围:0grad~400grad)
+rad => 弧度(取值范围:0rad~6.28rad)
+turn => 圆周(1turn等于360deg)
+</body>
+</html>

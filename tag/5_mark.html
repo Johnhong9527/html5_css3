@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>MARK</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    @import "../css/common.css";
+  </style>
+</head>
+<body>
+<h2>标记</h2>
+<h4>a标签:target属性</h4>
+_blank: 新窗口或标签页中打开文档<br/>
+_parent: 在父窗框组( frameset )中打开文档<br/>
+_self: 在当前窗口中打开文档(默认行为)<br/>
+_top: 在顶层窗口打开文档<br/>
+&lt;frame&gt;: 在指定窗口打开文档<br/>
+<h4>b标签: 表示关键词和产品名称[b{font-weight:bolder;}]</h4>
+<h4>em标签: 加以强调[em{font-style:italic;}]</h4>
+<h4>i标签: 表示外文词语或科技技术语[i{font-style:italic;}]</h4>
+<h4>s标签: 表示不准确或校正[s{text-decoration:line-through;}]</h4>
+<h4>strong: 表示重要文字标签[strong{text-weight:bolder;}]</h4>
+<h4>u: 为文字添加下划线[u{text-decoration:underline;}]</h4>
+<h4>small: 添加小号字体内容[u{font-size:smaller;}]</h4>
+<h4>sub: <span>下标<sub>1</sub></span>[vertical-align: sub;font-size: smaller;]</h4>
+<h4>sup: <span>上标<sup>2</sup></span>[vertical-align: sup;font-size: smaller;]</h4>
+<h4>换行</h4>
+br: 强制换行<br>
+wbr: 强制换行,只对英文有效,而中文没啥作用
+<h4>表示输入输出</h4>
+<code>code:表示计算机代码片段;[font-family:monospace;]</code><br/>
+<var>var:标签表示变量的名称，或者由用户提供的值。[font-size:italic;]</var><br/>
+<samp>samp:标签是一个短语标签，用来定义计算机程序的样本文本。[font-family:monospace;]</samp><br/>
+<h2>使用标题引用,引文,定义和缩写</h2>
+<h4>abbr:表示缩写</h4>
+title属性:表示该缩写的完整词语
+<abbr title="World Wide Web">www</abbr>
+<h4>dfn定义术语</h4>
+<dfn title="dfn">dfn</dfn>
+<dfn><abbr title="World Wide Web">www</abbr></dfn>
+<pre>
+&lt;dfn title="dfn"&gt;dfn&lt;/dfn&gt;
+&lt;dfn&gt;&lt;abbr title="World Wide Web"&gt;www&lt;/abbr&gt;&lt;/dfn&gt;
+</pre>
+<h4>q引用它处内容</h4>
+<q>q引用它处内容</q><br>
+习惯样式:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;q{display: inline;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;q:before{content: open-quote;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;q:after{content: close-quote;}<br>
+<h4>cite:引用其他作品标题(只能用于作品标题)</h4>
+习惯样式:cite{font-style:italic;}<br>
+<cite>cite</cite><br>
+<h2>使用语言元素</h2>
+<h4>ruby,rt,rp</h4>
+<h4>bdo元素</h4>
+<h4>bdi元素</h4>
+<h2>其他文本元素</h2>
+<h4>span</h4>
+<h4>mark</h4>
+<h4>表示添加和删除内容ins和del</h4>
+<h4>time</h4>
+</body>
+</html>
