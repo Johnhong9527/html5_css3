@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body > * {
+      float: left;
+    }
+
+    #target {
+      border: medium double black;
+      margin: 4px;
+      height: 75px;
+      width: 200px;
+      text-align: center;
+      display: table;
+    }
+
+    #target > p {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    table {
+      margin: 4px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 4px;
+    }
+  </style>
+  <title>拖放文件</title>
+</head>
+<body>
+<div id="target">
+  <p id="msg">Drop Files Here</p>
+</div>
+<input type="file" name="file">
+<table id="data" border="1"></table>
+<script>
+  function init() {
+    let target = document.getElementById('target');
+    let tableElem = document.getElementById('data');
+    tableElem.innerHTML = `<tr><th>Name</th><th>Type</th><th>Size</th></tr>`;
+    target.ondraenter = handleDrag;
+    target.ondragover = handleDrag;
+
+    function handleDrag(e) {
+      e.preventDefault();
+    }
+
+    target.ondrop = function (e) {
+      let files = e.dataTransfer.files;
+      console.log(files);
+//      return;
+
+      for (let i = 0; i < files.length; i++) {
+        let row = `<tr>
+                      <td>${files[i].name}</td>
+                      <td>${files[i].type}</td>
+                      <td>${files[i].size}</td>
+                    </tr>`;
+        tableElem.innerHTML = tableElem.innerHTML + row;
+      }
+      e.preventDefault();
+    }
+  }
+
+  window.onload = init;
+</script>
+</body>
+</html>

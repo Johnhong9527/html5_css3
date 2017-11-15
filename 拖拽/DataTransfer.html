@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DataTransfer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <style>
+    div.container-fluid {
+      width: 100%;
+      min-height: 30vh;
+      background-color: #b5ffa5;
+      margin: 5vh 0;
+      padding: 2vh 0;
+      display: flex;
+    }
+
+    div.container-fluid h4 {
+      text-align: center;
+      padding-top: 2vh;
+    }
+
+    div.container-fluid img {
+      display: block;
+      margin: 1vh auto;
+      width: 100px;
+      height: 100px;
+      float: left;
+      background-color: lightgrey;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid" id="target">
+  <h4>收入容器</h4>
+  <p id="msg"></p>
+</div>
+<div class="container-fluid" id="src">
+  <h4>支出容器</h4>
+  <img draggable="true" id="one" src="./images/1.jpg" alt="">
+  <img draggable="true" id="two" src="./images/2.jpg" alt="">
+  <img draggable="true" id="three" src="./images/3.jpg" alt="">
+  <img draggable="true" id="four" src="./images/4.jpg" alt="">
+  <img draggable="true" id="five" src="./images/5.jpg" alt="">
+</div>
+
+<!--script-->
+<script>
+  let init = function () {
+    let src = document.getElementById('src');
+    let target = document.getElementById('target');
+
+    target.ondragenter = handleDrag;
+    target.ondragover = handleDrag;
+
+    function handleDrag(e) {
+      console.log(e.dataTransfer.getData('Text'))
+//      console.log(61)
+      e.preventDefault()
+    }
+
+    // 释放事件tpl245
+    target.ondrop = function (e) {
+      let draggedID = e.dataTransfer.getData('Text');
+      let newElem = document.getElementById(draggedID).cloneNode(false);
+//      target.innerHTML = "";
+      target.appendChild(newElem);
+      e.preventDefault();
+    };
+    // 拖拽事件
+    src.ondragstart = function (e) {
+//      draggedID = e.target.id;
+      e.dataTransfer.setData("Text", e.target.id);
+//      e.target.classList.add('dragged')
+    };
+    src.ondragend = function (e) {
+//      target.innerHTML = "Drop Here";
+    };
+    src.ondrag = function (e) {
+//      target.innerHTML = e.target.id;
+    }
+  };
+  window.onload = init;
+</script>
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
