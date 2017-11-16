@@ -18,10 +18,41 @@
     width: 1000px;
     margin:0 auto;
   }
+  table{
+    margin: 0 auto;
+  }
+  table td{
+    text-align: center;
+    width: 100px;
+  }
 </style>
 </head>
 <body>
   <img class="doc" src="./doc/StorageEvent.png" alt="">
   StorageEvent  
+  <table id="data" border="1" cellpadding="5" cellspacing="5">
+    <tr>
+      <td>key</td>
+      <td>oldValue</td>
+      <td>newValue</td>
+      <td>url</td>
+      <td>storageArea</td>
+    </tr>
+  </table>
+  <script>
+
+    function handleStorage(e){
+      let data = document.getElementById('data');
+      data.innerHTML += `<tr>
+                          <td>${e.key}</td>
+                          <td>${e.oldValue}</td>
+                          <td>${e.newValue}</td>
+                          <td>${e.url}</td>
+                          <td>${e.storageArea == localStorage}</td>
+                        </tr>`
+      console.log(e)
+    }
+    window.onstorage = handleStorage;
+  </script>
 </body>
 </html>
