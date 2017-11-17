@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>srcset</title>
+  <style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  img{
+    width: 100%;
+    /*height: 100vh;*/
+    display: black;
+  }
+</style>
+</head>
+<body>
+<!--   告诉浏览器
+<img srcset="scones_small.jpg 450w, scones_medium.jpg 900w" sizes="(min-width: 17em) 100vw, (min-width:40em): 50vw" src="scones_large.jpg" alt="">
+-->
+
+根据可视区域宽度加载图片大小<br/>
+最大宽度为350px，加载   ·scones_small.jpg·<br/>
+最大宽度为750px，加载   ·scones_medium.jpg·<br/>
+无条件          加载   ·scones_large.jpg·<br/>
+<picture>
+  <source media="(max-width: 350px)" srcset="scones_small.jpg">
+    <source media="(max-width: 750px)" srcset="scones_medium.jpg">
+      <img src="scones_large.jpg" alt="One way or another, you WILL get cake.">
+    </picture>
+  </body>
+  </html>

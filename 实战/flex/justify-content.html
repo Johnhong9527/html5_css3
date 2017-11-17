@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <title>justify-content</title>
+  <style>
+  *{
+   padding: 0;
+   margin: 0;
+   font-family: 'Oswald', sans-serif;
+ }
+ body{
+  display: flex;
+ }
+ .container{
+  width: 50vw;
+  margin-right: auto;
+ }
+ h2{
+  text-align: center;
+}
+.FlexWrapper {
+  background-color: indigo;
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  width: 100%;
+}
+.FlexWrapper:nth-child(2){
+  justify-content: space-around;
+}
+.FlexInner {
+  background-color: #34005B;
+  display: flex;
+  height: 100px;
+  width: 25%;
+}
+img{
+  width: 500px;
+  margin-left:auto;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>space-between</h2>
+    <div class="FlexWrapper">
+      <div class="FlexInner">I am content in the inner Flexbox 1.</div>
+      <div class="FlexInner">I am content in the inner Flexbox 2.</div>
+      <div class="FlexInner">I am content in the inner Flexbox 3.</div>
+    </div>
+    <h2>space-around</h2>
+    <div class="FlexWrapper">
+      <div class="FlexInner">I am content in the inner Flexbox 1.</div>
+      <div class="FlexInner">I am content in the inner Flexbox 2.</div>
+      <div class="FlexInner">I am content in the inner Flexbox 3.</div>
+    </div>
+  </div>
+  <img src="https://www.w3.org/TR/css-flexbox-1/images/align-content-example.svg" alt="">
+</body>
+</html>

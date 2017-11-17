@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .ConterMe{
+    min-height: 5rem;
+    background-color: #6dc374;
+    display: flex;/*这是Flexbox的根本所在。这里就是把当前元素设置为一个Flexbox（而不是block或inline-block之类的）。*/
+    align-items: center; /*这是要在Flexbox中沿交叉轴对齐项目（在这个例子中垂直居中文本）。*/
+    justify-content: center;/*在这里设置内容沿主轴居中。在Flexbox中，可以把它想象成Word软件中的一个按钮，用于左、中、右对齐文本。*/
+  }
+</style>
+</head>
+<body>
+	<div class="ConterMe">
+    ConterMe
+  </div>
+</body>
+</html>

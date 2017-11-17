@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <title>对齐</title>
+  <style>
+    *{
+      font-family: 'Oswald', sans-serif;
+    }
+    .FlexWrapper{
+      background-color:indigo;
+      display: flex;
+      height: 200px;
+      width: 400px;
+      align-items: center;/*垂直居中*/
+    }
+    .FlexInner{
+      color: white;
+      background-color:#34005B;
+      display: flex;
+      height: 100px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="FlexWrapper">
+    <div class="FlexInner">I am content in the inner Flexbox.</div>
+  </div>
+</body>
+</html>

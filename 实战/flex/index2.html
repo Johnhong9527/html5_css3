@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  nav{
+    display:flex;
+    font-size:1rem; 
+    padding:0 1rem;
+    /*flex-direction: row-reverse;*/ /*所有元素反序排序*/
+    align-items:center;
+    min-height: 2.75rem;
+    background-color: indigo;
+    font-family:'Oswald',sans-serif;
+  }
+  .ListItem,.LastItem{
+    color: #ebebeb;
+    text-decoration:none;
+  }
+  .ListItem{
+    margin-right: 1rem;
+  }
+  .LastItem{
+    margin-left: auto;
+    /*margin-right: auto;*/ /*所有元素反序排序*/
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="ListItem">Home</a>
+    <a href="#" class="ListItem">About Us</a>
+    <a href="#" class="ListItem">Products</a>
+    <a href="#" class="ListItem">Policy</a>
+    <a href="#" class="LastItem">Contact Us</a>
+  </nav>
+</body>
+</html>
