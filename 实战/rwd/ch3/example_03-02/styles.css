@@ -12,6 +12,9 @@ body {
 .Wrap {
 	max-width: 1400px;
 	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .Header {
@@ -28,8 +31,12 @@ body {
 
 .OffCanvas-Active .Left,
 .OffCanvas-Active .Middle {
+	-webkit-transform: translate3d(200px, 0, 0);
 	transform: translate3d(200px, 0, 0);
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
 	transition: transform .3s;
+	transition: transform .3s, -webkit-transform .3s;
 }
 
 .Left {
@@ -40,7 +47,10 @@ body {
 	left: -200px;
 	width: 200px;
 	font-size: .9rem;
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
 	transition: transform .3s;
+	transition: transform .3s, -webkit-transform .3s;
 }
 
 @media (min-width: 40rem) {
@@ -54,7 +64,10 @@ body {
 .Middle {
 	height: 625px;
 	background-color: #bbbf90;
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
 	transition: transform .3s;
+	transition: transform .3s, -webkit-transform .3s;
 	font-size: .9rem;
 }
 
