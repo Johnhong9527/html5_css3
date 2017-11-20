@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>垂直排序</title>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  nav{
+    display:flex;
+    font-size:1rem; 
+    padding:0 1rem;
+    align-items:center;
+    min-height: 2.75rem;
+    flex-direction: column; /*垂直排序*/
+    /*flex-direction: column-reverse;*/ /*垂直排序-反序*/
+    background-color: indigo;
+    font-family: 'Oswald', sans-serif;
+  }
+  .ListItem,.LastItem{
+    color: #ebebeb;
+    text-decoration:none;
+  }
+  .ListItem{
+    margin-right: 1rem;
+  }
+  .LastItem{
+    /*margin-left: auto;*/
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="ListItem">Home</a>
+    <a href="#" class="ListItem">About Us</a>
+    <a href="#" class="ListItem">Products</a>
+    <a href="#" class="ListItem">Policy</a>
+    <a href="#" class="LastItem">Contact Us</a>
+  </nav>
+</body>
+</html>

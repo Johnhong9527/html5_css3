@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>简单的粘付页脚</title>
+  <style>
+  html,body{
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    height: 100%;
+  }
+  body{
+    color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .MainContent{
+    flex:1;
+    color:#333;
+    padding: .5rem;
+  }
+  .Footer{
+    background-color:violet; 
+    padding: .5rem;
+  }
+</style>
+</head>
+<body>
+  <div class="MainContent">
+    Here is a bunch of text up at the top. But there isn't enough
+    content to push the footer to the bottom of the page.
+  </div>
+  <div class="Footer">
+    However, thanks to flexbox, I've been put in my place.
+  </div>
+</body>
+</html>

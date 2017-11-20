@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <title>对齐</title>
+  <style>
+  *{
+    font-family: 'Oswald', sans-serif;
+  }
+  .FlexWrapper{
+    background-color:indigo;
+    display: flex;
+    height: 200px;
+    width: 400px;
+  }
+  .FlexInner{
+    color: white;
+    background-color:#34005B;
+    display: flex;
+    height: 100px;
+    width: 200px;
+  }
+  .AlignSelf{
+    color: white;
+    background-color:#34005B;
+    height: 100px;
+    width: 200px;
+    align-self: flex-end;
+  }
+</style>
+</head>
+<body>
+  <div class="FlexWrapper">
+    <div class="FlexInner">I am content in the inner Flexbox.</div>
+    <div class="AlignSelf">I am content in the inner Flexbox.</div>
+    <div class="FlexInner">I am content in the inner Flexbox.</div>
+  </div>
+  <img src="https://www.w3.org/TR/css-flexbox-1/images/align-content-example.svg" alt="">
+  <p>
+     flex-start：把元素的对齐设置为flex-start，可以让元素从Flexbox父元素的起始边
+    开始。
+  </p>
+  <p>
+     flex-end：把元素的对齐设置为flex-end，会沿Flexbox父元素的末尾对齐该元素。
+  </p>
+  <p>
+     center：把元素放在Flexbox元素的中间。
+  </p>
+  <p>
+     baseline：让Flexbox元素中的所有项沿基线对齐。
+  </p>
+  <p>
+     stretch：让Flexbox中的所有项（没交叉轴）拉伸至与父元素一样大。
+  </p>
+</body>
+</html>
