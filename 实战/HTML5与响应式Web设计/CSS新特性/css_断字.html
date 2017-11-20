@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>断字</title>
+  <style>
+    .truncate {
+      width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis; /* ellipsis(以点点显示)|clip */
+      white-space: nowrap; /*nowrap(不换行)|normal*/
+    }
+
+    .Scroll_Wrapper {
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      /* 在WebKiet的触摸设备上出现 */
+      -webkit-overflow-scrolling: touch;
+      /* 在支持的IE中删除滚动条 */
+      -ms-overflow-style: none;
+    }
+
+    /* 防止WebKit浏览器中出现滚动条 */
+    .Scroll_Wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .Item {
+      width: 200px;
+      display: inline-flex;
+      white-space: pre-wrap;
+    }
+
+    .Item img {
+      width: 100px;
+      height: 50%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<p class="truncate">OK, listen up, I've figured out the key eternal
+  happiness. All you need to do is eat lots of scones.</p>
+<h3>水平滚动</h3>
+<div class="Scroll_Wrapper">
+  <div class="Item">
+    <img src="scones.jpg" alt="">
+    OK, listen up, I've figured out the key eternal
+    happiness. All you need to do is eat lots of scones.
+  </div>
+  <div class="Item">
+    <img src="scones.jpg" alt="">
+    OK, listen up, I've figured out the key eternal
+    happiness. All you need to do is eat lots of scones.
+  </div>
+  <div class="Item">
+    <img src="scones.jpg" alt="">
+    OK, listen up, I've figured out the key eternal
+    happiness. All you need to do is eat lots of scones.
+  </div>
+  <div class="Item">
+    <img src="scones.jpg" alt="">
+    OK, listen up, I've figured out the key eternal
+    happiness. All you need to do is eat lots of scones.
+  </div>
+  <div class="Item">
+    <img src="scones.jpg" alt="">
+    OK, listen up, I've figured out the key eternal
+    happiness. All you need to do is eat lots of scones.
+  </div>
+</div>
+</body>
+</html>
